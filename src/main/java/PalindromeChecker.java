@@ -37,6 +37,23 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
+  String d = new String();
+  String l = new String();
+
+  for(int i = 0; i< sWord.length(); i++ ){
+    if(!sWord.substring(i,i+1).equals(" ")){
+      d += word.substring(i,i+1);
+    }
+  }
+   for(int i = 0; i < sWord.length(); i++){
+    l += sWord.substring(i,i+1).toLowerCase();
+  }
+  for(int i = 0; i < sString.length();i++ ){
+    if(Character.isLetter(sString.charAt(i) )){
+      d+= d.charAt(i);
+    }
+  }
+
   if(word.equals(reverse(word))){
     return true;
   }
