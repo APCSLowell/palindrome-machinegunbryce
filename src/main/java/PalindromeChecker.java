@@ -50,9 +50,8 @@ public boolean palindrome(String word)
       l+= d.charAt(i);
     }
   }
-     for(int i = 0; i < word.length(); i++){
-    l += word.substring(i,i+1).toLowerCase();
-  }
+
+  l = l.toLowerCase();
 
   if(l.equals(reverse(l))){
     return true;
