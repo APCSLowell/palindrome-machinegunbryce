@@ -40,21 +40,21 @@ public boolean palindrome(String word)
   String d = new String();
   String l = new String();
 
-  for(int i = 0; i< sWord.length(); i++ ){
-    if(!sWord.substring(i,i+1).equals(" ")){
+  for(int i = 0; i< word.length(); i++ ){
+    if(!word.substring(i,i+1).equals(" ")){
       d += word.substring(i,i+1);
     }
   }
-   for(int i = 0; i < sWord.length(); i++){
-    l += sWord.substring(i,i+1).toLowerCase();
-  }
-  for(int i = 0; i < sString.length();i++ ){
-    if(Character.isLetter(sString.charAt(i) )){
-      d+= d.charAt(i);
+  for(int i = 0; i < d.length(); i++ ){
+    if(Character.isLetter(d.charAt(i) )){
+      l+= d.charAt(i);
     }
   }
+     for(int i = 0; i < word.length(); i++){
+    l += word.substring(i,i+1).toLowerCase();
+  }
 
-  if(word.equals(reverse(word))){
+  if(l.equals(reverse(l))){
     return true;
   }
   return false;
